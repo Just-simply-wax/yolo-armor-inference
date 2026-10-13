@@ -1,0 +1,17 @@
+# 装甲板视频推理 —— Python 依赖（Ubuntu 22.04 / WSL2，Python 3.10）
+#
+# 重要：torch / torchvision 必须从 CUDA 专用源安装。
+# 默认的 PyPI 源提供的是 CPU 版，装了不报错但用不了显卡：
+#
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+#
+# 其余依赖可用本文件安装：
+#   pip install -r requirements.txt
+#
+ultralytics>=8.4.174
+opencv-python>=4.10
+numpy>=1.26
+
+# 系统若已安装 ffmpeg（Ubuntu: sudo apt install -y ffmpeg）则不需要下面这个；
+# 仅在完全没有 ffmpeg 的环境下作为回退方案。
+# imageio-ffmpeg>=0.5
